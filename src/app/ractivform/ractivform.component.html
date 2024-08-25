@@ -1,0 +1,29 @@
+<p>ractivform works!</p>
+<div>
+  <form [formGroup]="regform" (ngSubmit)="getdata(regform)" >
+    <div>
+      name:<input type="text"  formControlName="name">
+      @if(regform.controls['name'].touched && regform.controls['name'].invalid)
+{
+<span> name is reqired </span>
+}
+      </div>
+      <div>
+        email:<input type="text" formControlName="email">
+        @if(regform.controls['email'].touched && regform.controls['email'].invalid)
+        {
+        <span> email is reqired </span>
+        }
+        </div>
+        <div>
+          pass:<input type="text"  formControlName="pass">
+          @if(regform.controls['pass'].touched && regform.controls['pass'].invalid)
+          {
+          <span> pass is reqired </span>
+          }
+          </div>
+          <div>
+            <button type="submit">click me</button>
+            </div>
+    </form>
+  </div>

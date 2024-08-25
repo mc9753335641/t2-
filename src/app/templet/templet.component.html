@@ -1,0 +1,35 @@
+<p>templet works!</p>
+<div>
+  <form #manish="ngForm" (ngSubmit)="getdata(manish.value)">
+  <div>
+    name:<input type="text"   name="fname"   required ngModel #fname="ngModel">
+    @if(!fname.valid)
+      {
+        <span>
+          name is reqired
+          </span>
+      }
+    </div>
+    <div>
+      email:<input type="text" name="email"  required ngModel #email="ngModel">
+      @if(!email.valid)
+      {
+        <span>
+           email is reqired
+          </span>
+      }
+      </div>
+      <div>
+       pass: <input type="text" name="pass"   required  ngModel #pass="ngModel">
+       @if(!pass.valid)
+      {
+        <span>
+          pass is reqired
+          </span>
+      }
+        </div>
+        <div>
+        <button type="sumbit" [disabled]="manish.invalid"> ragister</button>
+        </div>
+        </form>
+  </div>

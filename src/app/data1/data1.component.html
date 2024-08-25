@@ -1,0 +1,5 @@
+<p>data1 works!</p>
+<input type="text"  #ram  (keyup)="0">
+<h1>{{ki}}</h1>
+
+<app-data2  [pdata]="ram.value" (child)=setdata($event)></app-data2>

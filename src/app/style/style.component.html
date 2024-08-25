@@ -1,0 +1,23 @@
+  <div [ngStyle] = "{'background-Color':'red'}">
+  <h1>  is worked</h1>
+  <p>style works!</p>
+  </div>
+@for (item of arrr; track item) {
+  @switch(item)
+  {
+    @case('red')
+    {
+      <div [ngStyle] = "{'background-Color':'red'}">
+        <h1>  is worked</h1>
+        <p>style works!</p>
+        </div>
+    }
+    @case('green')
+    {
+      <div [ngStyle] = "{'background-Color':'green'}">
+        <h1>  is worked</h1>
+        <p>style works!</p>
+        </div>
+  }
+}
+}

@@ -1,0 +1,31 @@
+<p>if-else works!</p>
+<button (click)="setdata(true)">male</button>
+<button (click)="setdata(false)">female</button>
+@if(istrue===true)
+{
+  <h1> i am male</h1>
+}@else if(istrue===false)
+{
+<h1> i am female</h1>
+}
+
+<button (click)="getdata('add')">add</button>
+<button (click)="getdata('min')">min</button>
+<button (click)="getdata('div')">div</button>
+<button (click)="getdata('malti')">malti</button>
+@switch(case) {
+@case('add')
+  {
+<h1>{{a+b}}</h1>
+  }
+  @case ('min') {
+    <h1>{{a-b}}</h1>
+  }
+  @case ('div') {
+    <h1>{{a*b}}</h1>
+  }
+  @case ('malti') {
+    <h1>{{a/b}}</h1>
+  }
+
+}
